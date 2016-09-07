@@ -19,21 +19,20 @@
     /** @ngInject */
     function NavbarController($log, $window, $timeout) {
 
-      console.log('¡holiiiii');
       // var myApp = new Framework7();
 
-      var $$ = Dom7;
+      // var $$ = Dom7;
 
-      $timeout(function() {
+      // $timeout(function() {
 
-        // // Open About popover
-        $log.info($$('.popover-periodicity'));
-        $$('.popover-periodicity').on('click', function () {
-            var clickedLink = this;
-            $window.F7.popover('.popover-about', clickedLink);
-        });
+      //   // // Open About popover
+      //   $log.info($$('.popover-periodicity'));
+      //   $$('.popover-periodicity').on('click', function () {
+      //       var clickedLink = this;
+      //       $window.F7.popover('.popover-about', clickedLink);
+      //   });
 
-      }, 2000);
+      // }, 2000);
 
     }
 
