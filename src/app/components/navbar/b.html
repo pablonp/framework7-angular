@@ -14,7 +14,32 @@
   <div data-page="bugs-open" class="page navbar-through">
     <div class="page-content">
       <div class="list-block">
+        <ul class="active-option" ng-show="false">
+          <li>
+            <a href="#" class="item-link smart-select" data-searchbar="true" data-searchbar-placeholder="Search indicators">
+              <div class="item-content">
+                <div class="item-inner">
+                  <!-- Select label -->
+                  <div class="item-title" >Active</div>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
         <ul>
+          <li>
+            <a href="#" class="item-link smart-select" data-searchbar="true" data-searchbar-placeholder="Search indicators">
+              <select name="indicators">
+                <option value="Candle" selected>Moving Average</option>
+              </select>
+              <div class="item-content">
+                <div class="item-inner">
+                  <!-- Select label -->
+                  <div class="item-title">Chart type</div>
+                </div>
+              </div>
+            </a>
+          </li>
           <li>
             <a href="#" class="item-link smart-select" data-searchbar="true" data-searchbar-placeholder="Search indicators">
               <select name="indicators">
