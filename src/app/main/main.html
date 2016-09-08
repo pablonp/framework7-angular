@@ -1,37 +1,39 @@
 <!-- Status bar overlay for full screen mode (PhoneGap) -->
 
-    <div class="statusbar-overlay"></div>
+<div class="statusbar-overlay"></div>
 
-    <!-- Views -->
-    <div class="views">
+<!-- Views -->
+<div class="views">
 
-      <!-- Your main view, should have "view-main" class -->
-      <div class="view view-main">
+  <!-- Your main view, should have "view-main" class -->
+  <div class="view view-main">
 
-        <navbar></navbar>
+    <navbar></navbar>
 
-        <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
-        <div class="pages navbar-through chart-page">
+    <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+    <div class="pages navbar-through chart-page">
 
-          <!-- Page, "data-page" contains page name -->
+      <!-- Page, "data-page" contains page name -->
 
-          <div data-page="index" class="page">
+      <div data-page="index" class="page">
 
-            <!-- Scrollable page content -->
-            <div class="page-content charts-main-page"></div>
+        <!-- Scrollable page content -->
+        <div class="page-content charts-main-page">
 
+          <div class="chartContainer">
+            <!--[if IE 8]><canvas id="ie8canvas" width="0" height="0" style="display:none"></canvas><![endif]-->
+            <!--[if IE 8]><canvas id="ie8canvasTemp" width="0" height="0" style="display:none"></canvas><![endif]-->
           </div>
 
-        </div>
+          <!-- Link to another page -->
+          <!-- <a href="app/components/indicators/settings.html" class="item-links">Indicator settings</a> -->
 
-        <!-- Bottom Toolbar-->
-        <div class="toolbar">
-
-          <div class="toolbar-inner">
-            <!-- Toolbar links -->
-            <a href="#" class="link">Link 1</a>
-            <a href="#" class="link">Link 2</a>
-
+          <div class="pages chart-page">
+            <div data-page="charts" class="page navbar-through">
+              <div class="page-content">
+                <div id="testing-indicators"></div>
+              </div>
+            </div>
           </div>
 
         </div>
@@ -40,6 +42,92 @@
 
     </div>
 
+    <!-- Bottom Toolbar-->
+    <div class="toolbar">
+
+      <div class="toolbar-inner">
+        <!-- Toolbar links -->
+        <a href="#" class="link">Link 1</a>
+        <a href="#" class="link">Link 2</a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- TEMPLATES -->
+
+<script type="text/template7" id="smart-select">
+
+  <div class="list-block">
+    <ul>
+      <li>
+        <a href="#" class="item-link smart-select">
+          <!-- select -->
+          <select name="fruits">
+            {{#each options}}
+              <option value="{{value}}">{{text}}</option>
+            {{/each}}
+          </select>
+          <div class="item-content">
+            <div class="item-inner">
+              <!-- Select label -->
+              <div class="item-title">{{name}}</div>
+              <!-- Selected value, not required -->
+              <!-- <div class="item-after">{{selected}}</div> -->
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</script>
+
+<script type="text/template7" id="input-slider">
+  <div class="list-block">
+    <ul>
+      <li>
+        <div class="item-content">
+          <div class="item-inner">
+            <div class="item-title label">{{name}}</div>
+            <div class="item-input">
+              <div class="range-slider">
+                <input type="range" val="{{value}}" step="0.1">
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</script>
+
+<!-- Timezone Dialogs -->
+<div id="studyDialog" class="indicators-modal">
+  <div class="modal-body stx-dialog">
+    <h4 class="modal-title">{{ dialogStudy }}</h4>
+    <div id="inputs">
+      <div class="inputTemplate" style="display:none">
+        <div class="stx-heading"></div>
+        <div class="stx-data"></div>
+      </div>
+    </div>
+
+    <div id="outputs">
+      <hr/>
+      <div class="outputTemplate" style="display:none">
+        <div class="stx-heading"></div>
+        <div class="stx-color"><span></span></div>
+      </div>
+    </div>
+    <div id="parameters"></div>
+
+  </div>
+</div>
 
 
 <!-- About popover -->
