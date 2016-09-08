@@ -18,16 +18,12 @@
     </div>
 
     <!-- Periodicity popover -->
+    <div class="modal-overlay"></div>
     <div class="popover popover-periodicity">
         <ul>
-            <li ng-repeat="periodicity in vm.periodicity" ng-click="vm.selectPeriodicity(periodicity)" class="close-popover">
+            <li ng-repeat="periodicity in vm.periodicity" ng-click="vm.selectPeriodicity(periodicity)" class="close-modal">
                 <span>{{periodicity}}</span>
             </li>
-            <!-- <li><span>{{vm.periodicity.min5}}</span></li>
-            <li><span>{{vm.periodicity.min15}}</span></li>
-            <li><span>{{vm.periodicity.hour1}}</span></li>
-            <li><span>{{vm.periodicity.day1}}</span></li>
-            <li><span>{{vm.periodicity.day5}}</span></li> -->
         </ul>
     </div>
 

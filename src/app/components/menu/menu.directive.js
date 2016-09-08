@@ -34,6 +34,8 @@
       vm.selectPeriodicity = function(periodicity){
         console.log(periodicity)
         vm.currentPeriodicity = periodicity;
+        $window.F7.closeModal('.popover-periodicity');
+        
       };
       // var myApp = new Framework7();
 
