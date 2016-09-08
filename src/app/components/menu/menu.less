@@ -1,0 +1,95 @@
+
+menu {
+  margin: 0;
+  .subnavbar {
+    background-color: #c8c9cd;
+    margin: 0;
+    .row {
+      width: 100%;
+      .button {
+        background-color: #fff;
+        border-color: #e0e0e3;
+        padding-left: 0;
+          &.left {
+          float: left;
+          i {
+            float: left;
+          }
+          p {
+            padding-left: 11%;
+          }
+        }
+        &.center {
+          float: left;
+          padding: 0;
+        }
+        &.right {
+          float: right;
+          padding-right: 0;
+          i {
+            float: left;
+            height: 100%;
+            margin: 0;
+          }
+          p {
+            padding-left: 8%;
+            margin-right: 0;
+          }
+          input {
+            background-color: inherit;
+            border: 0;
+            float: right;
+            height: 135%;
+            padding: 0;
+            position: absolute;
+            right: -7px;
+            width: 25%;
+          }
+        }
+        i {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+.popover-periodicity {
+  margin-top: 11%;
+  width: 35%;
+  z-index: 15000;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    li {
+      border-bottom: 1px solid rgba(114, 114, 114, 0.53);
+      color: #1483ff;
+      font-size: 20px;
+      line-height: 31px;
+      padding-left: 0;
+      text-align: center;
+      &:last-child {
+        border-bottom: 0;
+      }
+      span {
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+  }
+  .popover-angle {
+    top: -26px;
+    &:after {
+      top: 19px;
+    }
+  }
+}
+
+.modal-overlay{
+  position: fixed ;
+  height: 100%;
+  width: 100%;
+  z-index: 5000 !important;
+}
+

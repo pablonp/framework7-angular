@@ -1,0 +1,30 @@
+<div class="subnavbar">
+
+    <!-- Sub navbar content, for example tabs buttons -->
+    <div class="row">
+        <div class="left button open-popover col-33" data-popover=".popover-periodicity">
+            <i class="icon icon-form-gender"></i>
+            <p>{{vm.currentPeriodicity}}</p>
+        </div>
+        <div class="center button">
+            <i class="icon icon-form-toggle"></i>
+        </div>
+        <div class="right button col-40">
+            <i class="icon icon-form-settings"></i>
+            <p>Draw lines</p>
+            <input type="color">
+            <!-- <span></span> -->
+        </div>
+    </div>
+
+    <!-- Periodicity popover -->
+    <div class="modal-overlay"></div>
+    <div class="popover popover-periodicity">
+        <ul>
+            <li ng-repeat="periodicity in vm.periodicity" ng-click="vm.selectPeriodicity(periodicity)" class="close-modal">
+                <span>{{periodicity}}</span>
+            </li>
+        </ul>
+    </div>
+
+</div>
