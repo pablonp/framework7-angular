@@ -11,7 +11,9 @@
     var self = {};
 
     // Needed to load ajax web pages
-    var mainView = $window.F7.addView('.view-main');
+    var mainView = $window.F7.addView('.view-main', {
+      dynamicNavbar: true
+    });
 
     self.stxx = new STXChart({
       container: $$$('.chartContainer'),
